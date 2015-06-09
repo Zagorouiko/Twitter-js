@@ -9,6 +9,8 @@ Twitter.TweetController = Ember.ObjectController.extend({
       replies.addObject({
         reply: this.get('reply'),
       });
+      console.log(this.get('reply'))
+      console.log(replies[0])
     }
   }
 });
