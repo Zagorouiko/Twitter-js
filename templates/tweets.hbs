@@ -1,0 +1,15 @@
+<h1>Twitter</h1>
+
+<ul>
+  {{#each}}
+  <li>{{#link-to 'tweets' tweet.id}}{{tweet}}{{/link-to}}</li>
+  {{/each}}
+</ul>
+
+<form>
+  <div class="form-group">
+    <label for="new_tweet">New Tweet</label>
+    {{input id ="new_tweet" class="form-control" value=new_tweet}}
+    <button class="btn btn-primary" {{action 'post'}}>Post</button>
+  </div>
+</form>
